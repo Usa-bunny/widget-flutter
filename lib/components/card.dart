@@ -15,33 +15,42 @@ class MyCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      elevation: 5,
-      color: const Color.fromARGB(255, 239, 249, 244),
-      child: ListView(
+      elevation: 4,
+      shadowColor: Colors.black,
+      clipBehavior: Clip.antiAlias,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+      color: Colors.yellow[700],
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
         children: [
-          Padding(
-            padding: const EdgeInsets.only(left: 10, top: 10),
-            child: Text(
-              title,
-              style: TextStyle(
-                fontSize: 20,
-                color: const Color.fromARGB(255, 1, 70, 15),
+          AspectRatio(
+            aspectRatio: 16 / 9,
+            child: Image.network(
+              imageUrl,
+              fit: BoxFit.cover,
+              errorBuilder: (context, error, stackTrace) => Container(
+                color: Colors.grey[300],
+                child: Icon(Icons.broken_image, color: Colors.grey),
               ),
             ),
           ),
-          SizedBox(
-            width: double.infinity,
-            height: 300,
-            child: Image.network(imageUrl, fit: BoxFit.fill),
+          Padding(
+            padding: EdgeInsets.fromLTRB(16, 16, 16, 8),
+            child: Text(
+              title,
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
           ),
           Padding(
-            padding: EdgeInsets.all(10),
+            padding: EdgeInsets.fromLTRB(16, 0, 16, 16),
             child: Text(
               content,
-              style: TextStyle(
-                fontSize: 12,
-                color: const Color.fromARGB(255, 40, 126, 58),
-              ),
+              style: TextStyle(fontSize: 13, height: 1.4, color: Colors.white),
             ),
           ),
         ],
