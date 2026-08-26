@@ -1,12 +1,23 @@
-# learn_flutter
 
-A new Flutter project.
+# widget-flutter
 
-## Getting Started
+> Learning Flutter project
 
-This project is use for learning flutter.
+---
 
+## 🚀 Getting Started
+
+### Installation
+1. Clone the repository:
+~~~bash
+git clone https://github.com/Usa-bunny/widget-flutter.git
+cd widget-flutter
+~~~
+2. Run
 ```bash
 flutter run
 ```
 
+---
+
+<p align="center">🎮 <strong>Created by <a href="https://github.com/Usa-bunny">Usa-bunny</a></strong></p>
