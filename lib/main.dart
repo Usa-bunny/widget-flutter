@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:learn_flutter/pages/login_page.dart';
 import 'package:learn_flutter/pages/menu_page.dart';
+import 'package:learn_flutter/pages/register_page.dart';
 import 'package:learn_flutter/pages/stateless_widget.dart';
 import 'package:learn_flutter/pages/statefull_widget.dart';
 
@@ -20,6 +21,8 @@ class MyApp extends StatelessWidget {
         "/menupage": (context) => MenuPage(),
         "/stless": (context) => StlessWidget(),
         "/stfull": (context) => StfullWidget(),
+        "/login": (context) => LoginPage(),
+        "/register": (context) => RegisterPage(),
       },
     );
   }

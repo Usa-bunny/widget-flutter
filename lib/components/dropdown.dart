@@ -57,9 +57,12 @@ class MyDropdown extends StatelessWidget {
               borderSide: const BorderSide(color: Colors.yellow),
             ),
           ),
-          items: items.map((String item) {
-            return DropdownMenuItem<String>(value: item, child: Text(item));
-          }).toList(),
+          items: items
+              .map(
+                (String item) =>
+                    DropdownMenuItem<String>(value: item, child: Text(item)),
+              )
+              .toList(),
           onChanged: onChanged,
         ),
       ],

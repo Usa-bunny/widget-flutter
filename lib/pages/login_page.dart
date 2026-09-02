@@ -90,7 +90,7 @@ class _LoginPageState extends State<LoginPage> {
                     height: 48,
                     child: ElevatedButton(
                       onPressed: () {
-                        Navigator.push(
+                        Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(builder: (context) => MenuPage()),
                         );

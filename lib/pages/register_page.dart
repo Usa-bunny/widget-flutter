@@ -175,7 +175,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     height: 48,
                     child: ElevatedButton(
                       onPressed: () {
-                        Navigator.push(
+                        Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(builder: (context) => LoginPage()),
                         );
@@ -204,10 +204,7 @@ class _RegisterPageState extends State<RegisterPage> {
             SizedBox(height: 24),
             TextButton(
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => LoginPage()),
-                );
+                Navigator.pop(context);
               },
               child: Text(
                 'Sudah memiliki akun? Login',
