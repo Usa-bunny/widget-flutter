@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:learn_flutter/components/button.dart';
+import 'package:learn_flutter/pages/home_page.dart';
 
 class StfullWidget extends StatefulWidget {
   const StfullWidget({super.key});
@@ -24,7 +25,18 @@ class _StfullWidgetState extends State<StfullWidget> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: [MyButton()],
+          children: [
+            MyButton(),
+            TextButton(
+              onPressed: () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => HomePage()),
+                ),
+              },
+              child: Text("Go to rest api crud"),
+            ),
+          ],
         ),
       ),
     );
